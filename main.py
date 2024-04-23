@@ -13,7 +13,7 @@ data = response2.json()
 time = data['hourly']['time']
 precipitation = data['hourly']['rain']
 
-plt.figure(figsize=(40, 10))
+plt.figure(figsize=(50, 10))
 plt.plot(time, precipitation, marker='o', linestyle='-')
 plt.title('Rain in ' + location['city'])
 plt.xlabel('Time ')
