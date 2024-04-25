@@ -2,8 +2,8 @@
 import matplotlib.pyplot as plt
 import requests
 
-# Ask user for IP address
-ip = input("enter ip address:")
+# Get user's IP address
+ip = requests.get('https://api.ipify.org').text
 
 # Get location data from webAPI using IP address
 response = requests.get(f'https://ipgeolocation.abstractapi.com/v1/?api_key=08497c09676b46d1aeb921bc0f5481fa&ip_address={ip}')
